@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script data-main="js/main" src="js/require.js"></script>
+</head>
+<body>
+
+  <script type="text/html" id="wrapper_template">
+    <div class="wrapper">
+      <ol class="task_list"></ol>
+      <div class="controls">
+        <input class="controls_input" type="text">
+        <button class="controls_button">Add</button>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/html" id="item_template">
+  <% for (i = 0; i < data.length; i++) { %>
+    <li>
+      <%= data[i] %>
+      <span class="item_list_edit"> edit </span>
+      <span data_value="<%= data[i] %>" class="item_list_delete"> x </span>
+    </li>
+  <% }; %>
+  </script>
+
+</body>
+</html>
